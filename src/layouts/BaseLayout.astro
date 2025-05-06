@@ -6,6 +6,7 @@ import '@fontsource/geist-sans/700.css';
 // Supports weights 100-900
 import '@fontsource/geist-mono';
 import '../styles/global.css';
+import SideHeader from '../components/SideHeader.astro';
 
 const { pageTitle } = Astro.props;
 ---
@@ -15,13 +16,21 @@ const { pageTitle } = Astro.props;
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-    <title>{pageTitle}</title>
+    <title>
+      {pageTitle ? (pageTitle):('Matt Kevan')}
+    </title>
   </head>
   <body class="dark:bg-gray-950 dark:text-white">
     <Header />
-    <div class="prose lg:prose-lg dark:prose-invert mx-auto max-w-2xl pt-12">
-    <h1>{pageTitle}</h1>
-    <slot />
+
+    <div class="flex flex-row px-4 max-w-3xl mx-auto">
+      <div class="prose text-black dark:prose-invert mx-auto py-4 max-w-none">
+        {pageTitle && (
+        <h1>{pageTitle}</h1>
+        )}
+        <slot />
+      </div>
+    
     </div>
     <Footer />
 

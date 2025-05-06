@@ -3,8 +3,11 @@ import Hamburger from './Hamburger.astro';
 import Navigation from './Navigation.astro';
 ---
 <Hamburger/>
-<div class="p-4 sticky top-0 bg-white/70 dark:bg-gray-950/60 backdrop-blur-lg">
-  <nav class="max-w-2xl mx-auto flex flex-row justify-between">
-   <div class="w-[40px] h-[20px] bg-[url(/kevan.png)] dark:bg-[url(/kevan-dark.png)] bg-cover"></div><Navigation />
+<div class="p-4 bg-white/70 dark:bg-gray-950/60 backdrop-blur-lg">
+  <nav class="max-w-3xl px-4 mx-auto flex flex-row justify-between">
+    <a href="/">
+   <div class="w-[60px] h-[31px] bg-[url(/kevan.png)] dark:bg-[url(/kevan-dark.png)] bg-cover"></div>
+  </a>
+  <Navigation />
   </nav>
 </div>

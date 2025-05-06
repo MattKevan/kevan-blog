@@ -1,16 +1,13 @@
 ---
 import Social from './Social.astro';
 ---
-<style>
-  footer {
-    display: flex;
-    gap: 1rem;
-    margin-top: 2rem;
-  }
-</style>
 
-<footer>
-  <Social platform="twitter" username="astrodotbuild" />
-  <Social platform="github" username="withastro" />
-  <Social platform="youtube" username="astrodotbuild" />
+
+<footer class="max-w-2xl mx-auto flex justify-between text-sm border-t mt-4 pt-4">
+  <p>2025 Matt Kevan</p>
+  <div class="flex gap-4">
+    <p>Bluesky</p>
+    <p>Github</p>
+  </div>
+  
 </footer>

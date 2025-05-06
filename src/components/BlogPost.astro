@@ -1,4 +1,26 @@
 ---
-const { title, url } = Astro.props
+// BlogPost.astro
+import { getCollection, render } from 'astro:content';
+
+const { title, url, description, content } = Astro.props
+const { Content } = await render(content);
+const frontmatter = content.data
+const options = {
+  weekday: "long",
+  year: "numeric",
+  month: "long",
+  day: "numeric",
+};
 ---
-<li><a href={url}>{title}</a></li>
+<div class="border-b pb-8 mb-8">
+  <h2 class="font-bold !mt-0 !mb-4"><a class="font-bold no-underline hover:underline" href={url}>{title}</a></h2>
+  <p class="text-sm text-gray-600 font-mono">{frontmatter.pubDate.toLocaleDateString("en-GB", options)}</p>
+
+  <Content />
+  <div class="tags font-mono font-[300] text-sm flex gap-3 ">
+
+    {frontmatter.tags.map((tag: string) => (
+      <p class="!mt-0"><a class="text-gray-500 no-underline hover:underline" href={`/tags/${tag}`}>#{tag}</a></p>
+    ))}
+  </div>
+</div>

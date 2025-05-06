@@ -1,12 +1,23 @@
 ---
+import BlogPost from '../components/BlogPost.astro';
 import BaseLayout from '../layouts/BaseLayout.astro';
-const pageTitle = "Home Page";
-import Greeting from '../components/Greeting';
+import { getCollection } from "astro:content";
+
+//const pageTitle = "Home Page";
+const allPosts = await getCollection("blog");
 
 ---
-<BaseLayout pageTitle={pageTitle}>
-  <h2>My awesome blog subtitle</h2>
+<BaseLayout >
+  {
+    allPosts.map((post) => (
+      <BlogPost 
+        url={`/posts/${post.id}/`} 
+        title={post.data.title} 
+        frontmatter={post}
+        description={post.data.description}
+        content={post}/>
+    ))
+  }
 
-  <Greeting client:load messages={["Hej", "Hallo", "Hola", "Habari"]} />
 
 </BaseLayout>
