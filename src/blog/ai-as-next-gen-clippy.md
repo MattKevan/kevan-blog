@@ -1,0 +1,15 @@
+---
+title: AI as next-generation Clippy
+author: Matt Kevan
+description: "This post will show up on its own!"
+image:
+    url: ""
+    alt: ""
+pubDate: 2025-05-06
+tags: ["ai", "clippy", "app"]
+---
+Fun new app from [Felix Reiseberg](https://felixrieseberg.github.io/clippy):
+
+> Clippy lets you run a variety of large language models (LLMs) locally on your computer while sticking with a user interface of the 1990s. It's a love letter and homage to the late, great Clippy - and the visual design created by Microsoft in that era.
+
+Love this. I've often joked that AI chatbots are basically a modern iteration of Clippy, especially with ChatGPT's [overly sycophantic persona](https://openai.com/index/sycophancy-in-gpt-4o/). This takes the idea to its logical conclusion, with a lovely retro 90's UI. The real test is whether it also pops up randomly in the middle of tasks to offer unwanted advice.

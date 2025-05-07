@@ -1,0 +1,14 @@
+---
+title: Grublr - like StumbleUpon for the Wayback Machine
+author: Astro Learner
+description: ""
+image:
+    url: ""
+    alt: ""
+pubDate: 2025-05-02
+tags: ["internet", "internet-archive", "links", "history"]
+---
+
+If you get a hit of nostalgia just hearing the name StumbleUpon, you'd probably enjoy [Grublr](https://www.grublr.io/). Hit the button to load a random website from the archive. 
+
+Shows my age, but I'm having a bit of difficulty with the idea that a site from 2010 now counts as 'classic'.
