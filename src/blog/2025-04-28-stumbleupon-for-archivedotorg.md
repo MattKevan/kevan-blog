@@ -1,11 +1,11 @@
 ---
-title: Grublr - like StumbleUpon for the Wayback Machine
+title: StumbleUpon for the Wayback Machine
 author: Astro Learner
 description: ""
 image:
     url: ""
     alt: ""
-pubDate: 2025-05-02
+pubDate: 2025-04-28
 tags: ["internet", "internet-archive", "links", "history"]
 ---
 

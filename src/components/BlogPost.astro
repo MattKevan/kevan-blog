@@ -6,15 +6,15 @@ const { title, url, description, content } = Astro.props
 const { Content } = await render(content);
 const frontmatter = content.data
 const options = {
-  weekday: "long",
+
   year: "numeric",
   month: "long",
   day: "numeric",
 };
 ---
-<div class="border-b pb-8 mb-8">
+<div class="border-b border-gray-200 dark:border-gray-800 pb-8 mb-8">
   <h2 class="font-bold !mt-0 !mb-4"><a class="font-bold no-underline hover:underline" href={url}>{title}</a></h2>
-  <p class="text-sm text-gray-600 font-mono">{frontmatter.pubDate.toLocaleDateString("en-GB", options)}</p>
+  <p class="text-sm text-gray-500 font-mono">{frontmatter.pubDate.toLocaleDateString("en-GB", options)}</p>
 
   <Content />
   <div class="tags font-mono font-[300] text-sm flex gap-3 ">

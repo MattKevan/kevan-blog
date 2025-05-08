@@ -1,0 +1,25 @@
+---
+// Logo.astro - Simple color cycling logo with dark mode support
+---
+
+<svg width="40" height="20" viewBox="0 0 246 123" xmlns="http://www.w3.org/2000/svg">
+    <!-- Black areas that turn white in dark mode -->
+    <path d="M123 0V123L61.5 61.5L123 0Z" class="fill-black dark:fill-white transition-colors duration-300"></path>
+    <path d="M246 123L123 123L184.5 61.5L246 123Z" class="fill-black dark:fill-white transition-colors duration-300"></path>
+    
+    <!-- Color-animated areas - both cycling at same rate -->
+    <path d="M0 123V0L123 123H0Z" class="color-cycle"></path>
+    <path d="M123 -5.3765e-06L246 0L123 123L123 -5.3765e-06Z" class="color-cycle"></path>
+  </svg>
+  
+  <style>
+    @keyframes colorCycle {
+      0%, 100% { fill: #FF00FF; }
+      33.33% { fill: #FFFF00; }
+      66.66% { fill: #00FFFF; }
+    }
+    
+    .color-cycle {
+      animation: colorCycle 20s infinite;
+    }
+  </style>

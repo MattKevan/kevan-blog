@@ -1,0 +1,17 @@
+---
+title: Latest edition of the UX Lift newsletter now out
+author: Astro Learner
+description: ""
+image:
+    url: ""
+    alt: ""
+pubDate: 2025-05-02
+tags: ["ux", "uxlift", "links", "newsletter"]
+---
+
+[![UX Lift newsletter](/header2.png)](https://uxlift.beehiiv.com/p/ux-lift-links-roundup-9d0d)
+
+Just published the latest edition of my UX Lift newsletter. It's supposed to be fortnightly, but what with one thing and another I'm only managing about one a month.
+
+Anyway, [here it is](https://uxlift.beehiiv.com/p/ux-lift-links-roundup-9d0d), it's got some good stuff in, including a thoughtful piece about AI and design, more open source fonts than you can shake a stick at and some very punny business names.
+

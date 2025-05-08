@@ -1,0 +1,28 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import BlogPost from "../components/BlogPost.astro";
+const options = {
+
+  year: "numeric",
+  month: "long",
+  day: "numeric",
+};
+const pageTitle = "Archive";
+const allPosts = await getCollection("blog");
+const sortedPosts = allPosts.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+
+---
+<BaseLayout pageTitle={pageTitle}>
+    <ul>
+    {
+      sortedPosts.map((post) => (
+
+        <li><a href={`/posts/${post.id}/`} class="no-underline"><span class="hover:underline">{post.data.title}</span> - <span class="text-xs text-gray-500 font-mono">{post.data.pubDate.toLocaleDateString("en-GB", options)}</span></a></li>
+    
+    
+    
+    ))
+    }
+</ul>
+</BaseLayout>

@@ -1,35 +1,45 @@
 ---
-import { SEO } from "astro-seo";
+import config from '../variables';
 
-const { pageTitle, image, description } = Astro.props;
-
+const { frontmatter, pageTitle, image, description } = Astro.props;
+const metaTitle = pageTitle ? (pageTitle) : (config.siteTitle);
+const metaDescription = description ? (description) : (config.siteDescription);
+const metaImage = 'https://res.cloudinary.com/dhcgic4ld/image/upload/co_rgb:000000,c_fit,l_text:Helvetica_64_bold:' + metaTitle + ',w_1100/fl_layer_apply,g_north_west,x_50,y_170/og.png'
 ---
 
 <head>
-    <SEO
-      title={pageTitle}
-      description="A heavily optimized description full of well-researched keywords."
-      openGraph={{
-        basic: {
-          title: `{pageTitle}`,
-          type: "website",
-          image: "/favicon.ico",
-        }
-      }}
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{metaTitle}</title>
+  <meta property="og:title" content={metaTitle} />
+  <meta property="og:url" content="{{ page.url }}" />
+  <meta property="og:description" content={metaDescription} />
+  <meta property="og:image" content={metaImage} />
+  <meta property="og:type" content="{{ tags }}" />
+  <meta name="author" content={config.author}>
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="{{ site.twitter }}">
+  <meta name="twitter:creator" content="{{ site.twitter }}">
+  <meta name="twitter:url" content=" {{ site.url }}">
+  <meta name="twitter:title" content={metaTitle}>
+  <meta name="twitter:description" content={metaDescription} 
+  />
+  <meta name="twitter:image" content={metaImage}>
+  <meta name="twitter:image:alt" content={metaTitle}>
 
-      extend={{
-        // extending the default link tags
-        link: [{ rel: "icon", href: "/favicon.ico" }],
-        // extending the default meta tags
-        meta: [
-          {
-            name: "twitter:image",
-            content: "https://user-images.githubusercontent.com/5182256/131216951-8f74f425-f775-463d-a11b-0e01ad9fce8d.png",
-          },
-          { name: "twitter:title", content: pageTitle },
-          { name: "twitter:description", content: "Agent" },
-        ],
-      }}
-    />
-    
-  </head>
+  <link rel="canonical" href="{{ page.url | replace:'/index.html','' | prepend: site.url }}">
+
+  <link
+    rel="alternate"
+    type="application/rss+xml"
+    title={metaTitle}
+    href="{{ "/feed.xml" }}">
+  <link
+    rel="shortcut icon"
+    type="image/png"
+    href="/favicon.png">
+
+
+</head>
