@@ -10,12 +10,16 @@ import cloudflare from "@astrojs/cloudflare";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://example.com",
+  site: "https://www.kevan.tv",
   integrations: [preact(), react(), markdoc()],
 
   vite: {
     plugins: [tailwindcss()],
   },
 
-  adapter: cloudflare(),
+  adapter: cloudflare({
+    platformProxy: {
+      enabled: true,
+    },
+  }),
 });
