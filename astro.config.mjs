@@ -5,6 +5,8 @@ import markdoc from "@astrojs/markdoc";
 
 import cloudflare from "@astrojs/cloudflare";
 
+import netlify from "@astrojs/netlify";
+
 // https://astro.build/config
 export default defineConfig({
   site: "https://www.kevan.tv",
@@ -15,9 +17,5 @@ export default defineConfig({
   },
   
 
-  adapter: cloudflare({
-    platformProxy: {
-      enabled: true,
-    },
-  }),
+  adapter: netlify(),
 });
