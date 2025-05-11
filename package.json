@@ -1,5 +1,5 @@
 {
-  "name": "kevan",
+  "name": "test-blog",
   "type": "module",
   "version": "0.0.1",
   "scripts": {
@@ -12,14 +12,12 @@
     "@astrojs/markdoc": "^0.14.2",
     "@astrojs/netlify": "^6.3.2",
     "@astrojs/rss": "^4.0.11",
-    "@fontsource-variable/geist": "^5.2.6",
-    "@fontsource-variable/geist-mono": "^5.2.6",
     "@fontsource/geist-mono": "^5.2.6",
     "@fontsource/geist-sans": "^5.2.5",
-    "@tailwindcss/vite": "^4.1.5",
-    "astro": "^5.7.10",
+    "@tailwindcss/vite": "^4.1.6",
+    "astro": "^5.7.12",
     "astro-seo": "^0.8.4",
-    "tailwindcss": "^4.1.5"
+    "tailwindcss": "^4.1.6"
   },
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.16"
