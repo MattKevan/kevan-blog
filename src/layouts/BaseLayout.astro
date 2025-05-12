@@ -33,8 +33,6 @@ import { initScreensaver } from '../scripts/screensaver.js';
   document.addEventListener('DOMContentLoaded', () => {
     const screensaver = initScreensaver({
       timeout: 2 * 60 * 1000, // 2 minutes (adjust as needed)
-      type: 'stars', // Initial type: 'stars', 'pipes', or 'toasters'
-      showSelector: true // Set to false to hide the type selector
     });
     
     // Example: You can also control it programmatically
@@ -42,5 +40,6 @@ import { initScreensaver } from '../scripts/screensaver.js';
     // document.getElementById('stop-button').addEventListener('click', screensaver.stop);
   });
       </script>
+      
   </body>
 </html>
