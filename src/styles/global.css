@@ -6,3 +6,24 @@
     --font-mono: "Geist Mono", "monospace";
   }
 
+
+.link-preview {
+    @apply border border-gray-200  !rounded !w-full mb-4;
+  }
+
+  .link-preview img {
+    @apply !rounded-t
+  }
+
+.link-preview__content {
+  @apply !p-4;
+}
+
+a.link-preview__title{
+  @apply !font-bold no-underline hover:underline;
+}
+
+.link-preview__domain,
+.link-preview__description {
+  @apply !text-gray-500 !font-mono;
+}
